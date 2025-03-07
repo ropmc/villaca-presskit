@@ -38,6 +38,8 @@
             width:100svw;
             height:100svh;
             background-color: var(--grey-var);
+            display:flex;
+            align-items: flex-end;
         }
 
         .horizontal-line{
@@ -168,6 +170,36 @@
             border-radius:23px;
         }
 
+
+        @media screen and (max-width:480px) {
+            .page-wrapper{
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height:auto;
+                padding-top:80px;
+            }
+
+            .biography-content{
+                margin-top:50px;
+                width:85%;
+                display:flex;
+                align-items:center;
+                padding-right:0px;
+            }
+
+            .home-video-wrapper{
+                height:30%;
+                width:100%;
+            }
+
+            .social-media-widget{
+                top:29%;
+            }
+
+        }
+
     </style>
 
     <style>
@@ -187,29 +219,31 @@
     </style>
 </head>
 <body>
-    <div class="page-wrapper" style="display:flex;align-items: flex-end;">
+    <div class="page-wrapper">
+
+        <div class="navbar box-shadow">
+            <div class="first-page-name-display fade-in" style="margin-right:50px;">Villaça</div>
+            <a class="anchor-tag-navbar">Vídeos</a>
+            <a class="anchor-tag-navbar">Contato</a>
+        </div>
 
         <div class="home-video-wrapper">
             <div class="video-top-logo">Villaça</div>
             <div class="radial-fade-bg-mask"></div>
             <video class="box-shadow fade-in radial-fade" style="height:auto;width:100%;" autoplay muted loop src="videos/Homepage Video Compressed.mp4"></video>
-            <button>Ver no Youtube</button>
+            <button onclick=" window.open('https://www.youtube.com/watch?v=bLzemm4nr64', '_blank'); ">Ver no Youtube</button>
         </div>
 
         <div class="biography-content">
-            BIOGRAPHY<br><br>
+            <p style="font-size:20px;">BIOGRAPHY</p><br>
             <div class="biography-text-content fade-in">Nascido e criado na vibrante metrópole de São Paulo, interessado por música e vida noturna desde cedo, não demorou muito para que Villaça se interessasse pela criação de música e discotecagem. Em 2016 já frequentava as festas underground e a partir de 2017 começou a criar músicas eletrônicas, dando início ao projeto 'Villaça', buscando sentido comum entre as diversas e horizontais referências que moldam sua personalidade artística. Seus sets vão desde faces mais swingadas e delicadas da House Music até facetas mais densas do techno e trance, seja em formato Live ou DJ Set.<br><br>
 
                 Frequentemente é possível perceber melodias de rock dentro do techno, timbres e padrões de percussão brasileira e de hip hop mescladas com house e trance, estruturas de mudança de espaço de improviso característicos de jazz dos 60 e 70. O projeto também bebe da fonte da pluralidade do techno e do house em diferentes épocas, desde os primórdios do Chicago, Detroit e New Beat Belga, passando pelo UKG, Tech-House, Trance e Dub-Techno.<br><br>
                 
                 Villaça busca aliar suas produções características à boa comunicação com artistas e públicos de diferentes meios, visando cada vez mais conquistar espaço nas festas no Brasil e no mundo. Villaça já realizou turnês no Brasil (Florianópolis, Manaus, Brasília, Foz do Iguaçu) e participou da edição de 2022 do Boiler Room São Paulo (vídeo). No exterior, o artista conta com passagens por festas e clubes importantes como 'Dynamitas Club' no México, festa 'Melt' em Los Angeles, 'No Signal' e 'Milla25' no Peru e diversas outras. Dentro dessas experiências, já dividiu cabine e teve suas faixas tocadas por artistas como Jane Fitz, Quest, Raphael Carrau, Z@P, Bassam, Shanti Celeste, entre outros.</div>
         </div>
+
         
-        <div class="navbar box-shadow">
-            <div class="first-page-name-display fade-in" style="margin-right:50px;">Villaça</div>
-            <a class="anchor-tag-navbar">Vídeos</a>
-            <a class="anchor-tag-navbar">Contato</a>
-        </div>
 
         <div class="social-media-widget">
             
