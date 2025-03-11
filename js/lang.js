@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if(selectElement.options[selectElement.selectedIndex].value == 'US'){
             window.location.href = 'en.html' 
         } else{
-            window.location.href = '/index.html';
+            window.location.href = '/villaca-presskit';
         }
     })
 
