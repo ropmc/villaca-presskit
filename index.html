@@ -1,219 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script type="text/javascript" src="./js/carousel.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Villaça Presskit</title>
-    <style>
-        :root{
-            --white-var: #ffffff;
-            --grey-var: #1e1e1e;
-            --light-grey: #333333bf;
-
-            --transparent-blue: rgba(255, 20, 145, 0.1);
-
-            --new-grey: #161d23;
-            --dark-blue: #0f444c;
-            --blue: #114538;
-            --light-blue: #5e8d83;
-            --ulight-blue: #d2e1cc;
-            
-        }
-
-        body{
-            margin:0;
-            overflow-x:hidden;
-            padding:0;
-            font-family: "Montserrat", serif;
-            font-optical-sizing: auto;
-            font-weight: 400;
-            font-style: normal;
-            color:white;
-        }
-
-        .page-wrapper{
-            width:100svw;
-            height:100svh;
-            background-color: var(--grey-var);
-            display:flex;
-            align-items: flex-end;
-        }
-
-        .horizontal-line{
-            width:100%;
-            background: rgb(4,20,33);
-            background: radial-gradient(circle, var(--new-grey) 0%, var(--ulight-blue) 25%, var(--light-blue) 54%, var(--blue) 79%, var(--dark-blue) 100%);
-            height:5px;
-            position:absolute;
-            bottom:5%;
-            opacity:50%;
-            z-index:2;
-        }
-
-        .social-media-widget{
-            display:flex;
-            justify-content: center;
-            align-items: center;
-            position:absolute;
-            bottom: 5%;
-            right:0.2%;
-            width:auto;
-        }
-
-        .social-media-link{
-            padding-right:10px;
-            padding-bottom:2px;
-        }
-
-        .navbar{
-            position:fixed;
-            display:flex;
-            justify-content: flex-start;
-            padding-left:2%;
-            align-items: center;
-            top:0;
-            width:100svw;
-            height:8%;
-            background-color: var(--light-grey);
-        }
-
-        .box-shadow{
-            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        }
-
-        .first-page-name-display{
-            position:relative;
-            left:0;
-            color:var(--white-var);
-            font-size:30px;
-            font-weight:600;
-            z-index:3;
-        }
-
-        .home-video-wrapper{
-            width:50%;
-            height:92%;
-            display:flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-
-        .radial-fade{
-            z-index:2;
-            -webkit-mask: radial-gradient(circle at 50% 50%, black 20%, transparent 55%);
-        }
-
-        .radial-fade-bg-mask{
-            z-index:1;
-            width:50%;
-            height:50%;
-            position:absolute;
-            background: linear-gradient(125deg, aqua 13%, deeppink 38%);
-            -webkit-mask: radial-gradient(circle at 10% 50%, black 0%, transparent 25%);
-            opacity:15%;
-        }
-
-        .anchor-tag-navbar{
-            color:white;
-            margin-right:10px;
-            margin-left:10px;
-        }
-
-        .fade-in{
-            animation-name: fade-in;
-            animation-duration: 3s;
-        }
-
-        .biography-content{
-            width:50%;
-            height:92%;
-            padding-right:15vw;
-            display:flex;
-            justify-content: center;
-            align-items: flex-start;
-            flex-direction: column;
-            font-weight:800;
-        }
-
-        .biography-text-content{
-            font-size:14px;
-            font-weight:600;
-        }
-
-        button{
-            border-width:0px;
-            cursor:pointer;
-            padding: 15px 30px;
-            font-size:12px;
-            background-color: #146ef5;
-            font-weight:600;
-            color:white;
-            border-radius:23px;
-        }
-
-        button:hover{
-            background-color: #146ef5a1;
-        }
-
-
-        .video-top-logo{
-            font-family: "Bangers", serif;
-            font-weight: 400;
-            font-style: normal;
-            border: 1px solid;
-            font-size: 65px;
-            padding: 10px;
-            border-radius:23px;
-        }
-
-        .social-media-widget-mobile{
-            display:none;
-        }
-
-
-        @media screen and (max-width:480px) {
-            .page-wrapper{
-                display:flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                height:auto;
-                padding-top:80px;
-            }
-
-            .biography-content{
-                margin-top:50px;
-                width:85%;
-                display:flex;
-                align-items:center;
-                padding-right:0px;
-            }
-
-            .home-video-wrapper{
-                height:30%;
-                width:100%;
-            }
-
-            .social-media-widget{
-                top:30%;
-                display:none;
-            }
-
-            .social-media-widget-mobile{
-                margin-top:15px;
-                display: block;
-                width:100%;
-                display:flex;
-                justify-content: flex-end;
-            }
-
-        }
-
-    </style>
+    <link rel="stylesheet" type="text/css" href="css/carousel.css">
+    <link rel="stylesheet" type="text/css" href="css/villaca-presskit.css">
 
     <style>
 
@@ -236,8 +31,10 @@
 
         <div class="navbar box-shadow">
             <div class="first-page-name-display fade-in" style="margin-right:50px;">Villaça</div>
-            <a class="anchor-tag-navbar">Vídeos</a>
-            <a class="anchor-tag-navbar">Contato</a>
+            <a class="anchor-tag-navbar" style="text-decoration: none;" href="#biography">Bio</a>
+            <a class="anchor-tag-navbar" style="text-decoration: none;" href="#videos">Vídeos</a>
+            <a class="anchor-tag-navbar" style="text-decoration: none;" href="#rider">Rider</a>
+            <a class="anchor-tag-navbar" style="text-decoration: none;" href="#contact">Contato</a>
         </div>
 
         <div class="home-video-wrapper">
@@ -264,8 +61,8 @@
 
         </div>
 
-        <div class="biography-content">
-            <p style="font-size:20px;">BIOGRAPHY</p><br>
+        <div id="biography" class="biography-content">
+            <p style="font-size:20px;">BIOGRAFIA</p><br>
             <div class="biography-text-content fade-in">Nascido e criado na vibrante metrópole de São Paulo, interessado por música e vida noturna desde cedo, não demorou muito para que Villaça se interessasse pela criação de música e discotecagem. Em 2016 já frequentava as festas underground e a partir de 2017 começou a criar músicas eletrônicas, dando início ao projeto 'Villaça', buscando sentido comum entre as diversas e horizontais referências que moldam sua personalidade artística. Seus sets vão desde faces mais swingadas e delicadas da House Music até facetas mais densas do techno e trance, seja em formato Live ou DJ Set.<br><br>
 
                 Frequentemente é possível perceber melodias de rock dentro do techno, timbres e padrões de percussão brasileira e de hip hop mescladas com house e trance, estruturas de mudança de espaço de improviso característicos de jazz dos 60 e 70. O projeto também bebe da fonte da pluralidade do techno e do house em diferentes épocas, desde os primórdios do Chicago, Detroit e New Beat Belga, passando pelo UKG, Tech-House, Trance e Dub-Techno.<br><br>
@@ -293,8 +90,140 @@
         
     </div>
 
+    <div class="page-wrapper" style="align-items: center; justify-content: center;">
+
+        <div id="videos" class="videos">
+            <p style="font-size:30px;"><strong>VÍDEOS</strong></p><br>
+            <div class="carousel box-shadow" start-index="1" style="border:1px var(--light-grey) solid;">
+
+            <div class="carousel-right-arrow"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M10 7L15 12L10 17" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg> </div>
+            
+            <div class="carousel-left-arrow"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(180)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M10 7L15 12L10 17" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg> </div>
+            
+
+            <div class="carousel-item inactive">
+                <video class="carousel-video" controls src="videos/sets/62bb598e-d907-41fa-81e6-dcb1e15be307.mp4#t=0.1">
+            </div>
+
+            <div class="carousel-item inactive">
+                <video class="carousel-video" controls src="videos/sets/Dj set lima 2.mov#t=0.1">
+            </div>
+
+            <div class="carousel-item inactive">
+                <video class="carousel-video" controls src="videos/sets/Dj set lima taref x no signal.MOV#t=0.1">
+            </div>
+
+            <div class="carousel-item inactive">
+                <video class="carousel-video" controls src="videos/sets/Gig lofi 7.mov#t=0.1">
+            </div>
+
+            <div class="carousel-item inactive">
+                <video class="carousel-video" controls src="videos/sets/Gig Lofi 8.mp4#t=0.1">
+            </div>
+
+            <div class="carousel-item inactive">
+                <video class="carousel-video" controls src="videos/sets/IMG_1743.mov#t=0.1">
+            </div>
+
+            <div class="carousel-item inactive">
+                <video class="carousel-video" controls src="videos/sets/live perpetua1.MOV#t=0.1">
+            </div>
+
+            <div class="carousel-item inactive">
+                <video class="carousel-video" controls src="videos/sets/live perpetua2.MOV#t=0.1">
+            </div>
+
+            <div class="carousel-item inactive">
+                <video class="carousel-video" controls src="videos/sets/live perpetua3.MOV#t=0.1">
+            </div>
+
+            <div class="carousel-item inactive">
+                <video class="carousel-video" controls src="videos/sets/live perpetua4.MOV#t=0.1">
+            </div>
+
+            <div class="carousel-item inactive">
+                <video class="carousel-video" controls src="videos/sets/live perpetua5.MOV#t=0.1">
+            </div>
+
+            <div class="carousel-item inactive">
+                <video class="carousel-video" controls src="videos/sets/live perpetua6.MOV#t=0.1">
+            </div>
+
+            <div class="carousel-item inactive">
+                <video class="carousel-video" controls src="videos/sets/live perpetua7.MOV#t=0.1">
+            </div>
+
+            <div class="carousel-item inactive">
+                <video class="carousel-video" controls src="videos/sets/Nova era.mp4#t=0.1">
+            </div>
+
+
+            <div class="carousel-counter">
+            </div>
+        </div>
+
+        </div>
+
+        <div id="rider" class="videos">
+            <p style="font-size:30px;"><strong>RIDER TÉCNICO</strong></p><br>
+            <div class="widget mobile-adjust">
+                <strong>LIVE ACT</strong><br>
+                1m² de espaço extra para computador com Ableton Live e outros equipamentos, sem a necessidade de tirar a CDJ e Technics da mesa e 1m² de espaço na lateral para teclado.<br><br>
+                <br><br>
+                <strong>DJ SET</strong><br>
+                XONE 92 ou Pioneer DJM 900 + par de CDJs 200 e um par de Technics (qualquer modelo). Caso a festa use um mixer rotativo, será necessário uma passagem de som para o artista se familiarizar com o modelo utilizado.
+            </div>
+        </div>
+
+    </div>
+
     <div class="page-wrapper">
-        
+        <div class="center" style="flex-direction: column;">
+        <p class="phone-center" style="font-size:30px;"><strong>CONTATO E REDES SOCIAIS</strong></p><br>
+        <div id="contact" class="widget">
+            
+            <div class="contact-inside-splitter">
+
+            <div class="contact-inside cellphone-margin-bottom">
+                <img class="contact-img" src="imgs/IMG_0766.JPG">
+            </div>
+
+            <div class="contact-inside">
+            
+                <div class="social-media-line">
+                    <svg class="social-media-icon" height="32px" width="32px" version="1.1" id="_x36_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="256.0002" y1="347.8895" x2="256.0002" y2="-8.003553e-011"> <stop offset="0" style="stop-color:#DA9621"></stop> <stop offset="0.7685" style="stop-color:#EAA12F"></stop> </linearGradient> <path style="fill:url(#SVGID_1_);" d="M511.972,170.467v11.507c-0.6,0.427-1.372,0.937-2.143,1.448l-19.117,13.041 c-1.285,0.853-2.828,1.875-4.371,2.984c-7.973,5.283-18.345,12.358-25.203,16.876L293.376,329.769l-5.315,3.58l-15.602,10.569 c-1.972,1.278-4.286,2.301-6.858,2.983c-1.029,0.34-2.229,0.511-3.343,0.681c-0.172,0.085-0.343,0.085-0.428,0.085 c-1.972,0.256-3.943,0.256-5.83,0.171c-1.886,0.085-3.857,0.085-5.829-0.171c-1.285-0.171-2.572-0.427-3.772-0.767 c-2.572-0.681-4.886-1.705-6.858-2.983l-7.029-4.774l-8.572-5.795L50.862,216.324c-1.886-1.279-4.029-2.728-6.429-4.262 c-6-4.006-13.03-8.779-18.774-12.614c-1.543-1.109-3.086-2.131-4.372-2.984L2.171,183.423c-0.771-0.511-1.543-1.022-2.143-1.448 v-11.507c0-1.96,0.257-3.494,0.686-4.943c0-0.084,0.086-0.084,0.086-0.084c0.429-0.341,0.857-0.597,1.371-0.939l6.172-4.262 l12.944-8.779c8.143-5.454,21.431-14.489,29.574-19.859L239.541,4.007c4.544-2.898,10.544-4.262,16.459-3.921 c0.6,0,1.114-0.085,1.715-0.085h0.086c5.315,0,10.63,1.365,14.659,4.007l188.679,127.594c6.772,4.432,17.059,11.421,25.031,16.792 c1.629,1.107,3.172,2.131,4.543,3.067l12.944,8.779l6.172,4.262c0.514,0.341,0.943,0.597,1.371,0.939 C511.715,166.888,511.972,168.507,511.972,170.467z"></path> <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="256.0005" y1="398.9169" x2="256.0005" y2="51.0644"> <stop offset="0" style="stop-color:#DA9621"></stop> <stop offset="0.7685" style="stop-color:#EAA12F"></stop> </linearGradient> <path style="fill:url(#SVGID_2_);" d="M512,221.49v11.441c-0.625,0.443-1.429,0.976-2.141,1.508l-19.179,13.037 c-8.116,5.41-21.407,14.455-29.524,19.866L272.502,394.875c-2.051,1.33-4.371,2.305-6.868,3.015 c-3.032,0.887-6.422,1.153-9.633,0.975c-3.211,0.178-6.601-0.089-9.633-0.975c-2.498-0.71-4.817-1.685-6.868-3.015L50.845,267.341 c-8.117-5.411-21.408-14.456-29.524-19.866L2.142,234.439c-0.712-0.533-1.516-1.065-2.141-1.508V221.49 c0-1.951,0.268-3.548,0.714-4.966c0-0.089,0.089-0.089,0.089-0.089c0.446-0.355,0.892-0.622,1.337-0.977l6.245-4.257l12.934-8.78 c8.116-5.41,21.407-14.455,29.524-19.866L239.499,55.023c4.549-2.927,10.614-4.258,16.501-3.903 c5.887-0.355,12.042,0.975,16.501,3.903l188.655,127.532c8.117,5.411,21.408,14.456,29.524,19.866l12.934,8.78l6.245,4.257 c0.445,0.355,0.891,0.621,1.337,0.977C511.732,217.853,512,219.539,512,221.49z"></path> <path style="fill:#CC8529;" d="M262.258,314.513v35.968h-1.029l-11.487,0.767H0.028V173.792c0-1.96,0.257-3.58,0.686-4.944 c0-0.085,0.086-0.085,0.086-0.085c0.943-2.983,2.829-4.688,5.315-5.114l10.716,6.307l5.057,2.983l23.06,13.553l1.2,0.681 l14.659,8.609l166.819,98.359l0.343,0.171l33.089,19.433L262.258,314.513z"></path> <g> <path style="fill:#F6B75A;" d="M266.715,336.247c0,0.085-1.714,1.279-4.457,3.239c-1.715,1.108-3.858,2.558-6.258,4.262 c-1.2,0.767-2.486,1.619-3.857,2.557l-1.972,1.363l-3.772,2.557l-1.629,1.023l-26.66,17.984c-2.829,1.875-5.658,3.835-8.229,5.626 c-4.886,3.324-8.916,6.051-10.287,6.903c-1.972,1.449-10.201,6.99-18.345,12.529l-44.577,30.088l-0.172,0.171l-0.085,0.085 L27.031,498.447c-1.886,1.279-3.943,2.642-5.915,4.006c-1.115,0.767-2.229,1.449-3.343,2.216H8.515 c-4.972,0-7.801-1.108-8.401-2.983c0-0.085,0-0.085,0-0.085c0-0.341-0.086-0.597,0-1.023c-0.086-0.512-0.086-1.023-0.086-1.62 V173.792c0-1.96,0.257-3.58,0.686-4.944c0-0.085,0.086-0.085,0.086-0.085c0.943-2.983,2.829-4.688,5.315-5.114 c0.771-0.256,1.457-0.256,2.229-0.171c1.886,0.085,4.029,0.938,6.344,2.472l30.346,20.456l1.114,0.767l13.116,8.864 c0.257,0.171,0.514,0.341,0.771,0.512c8.058,5.455,20.745,14.064,28.632,19.348l153.446,103.729 c0.172,0.085,0.343,0.171,0.429,0.256c0.257,0.171,0.514,0.341,0.771,0.512c2.057,1.363,4.029,2.728,5.829,3.92 c3.001,1.96,5.401,3.665,6.858,4.688c0.857,0.512,1.458,0.852,1.543,0.937c0.343,0.255,2.486,1.705,4.715,3.324 c0.086,0,0.086,0.085,0.171,0.085C264.744,334.968,266.715,336.161,266.715,336.247z"></path> <g> <path style="fill:#F0A642;" d="M511.865,171.974c0.074,1,0.134,2.92,0.134,4.267v320.232c0,1.347,0,2.708,0,3.025 c0,0.317-0.089,1.248-0.089,1.419c0,0.171,0,0.311,0,0.666c0,0,0,0.02,0,0.044c0,0.024-0.783,0.723-1.74,1.551 c-0.957,0.829-7.747,1.507-9.094,1.507h-4.378c-1.347,0-3.365-0.612-4.486-1.359l-5.204-3.489 c-1.12-0.748-2.95-1.976-4.066-2.731L332.776,395.641c-1.116-0.754-2.942-1.988-4.058-2.742l-14.324-9.753 c-1.112-0.76-2.935-1.999-4.05-2.754l-14.412-9.754c-1.113-0.758-2.938-1.994-4.055-2.747l-24.216-16.33 c-1.117-0.753-2.944-1.984-4.062-2.736l-1.734-1.167c-1.117-0.752-2.95-1.976-4.072-2.72c0,0-0.635-0.421-1.795-1.219 c-6.155-4.257-10.704-7.362-10.704-7.451c0-0.089,1.963-1.329,4.282-2.926c2.318-1.597,2.885-1.986,2.885-1.986 c1.111-0.762,2.161-1.484,2.332-1.607c0.172-0.122,2.109-1.383,3.214-2.152c0,0,5.125-3.567,10.657-7.204 c0.268-0.178,0.268-0.178,0.268-0.178c0.294-0.195,0.595-0.394,0.668-0.443c0.073-0.049,0.954-0.617,1.74-1.153 c0.785-0.536,2.341-1.592,3.457-2.346l146.508-98.984c1.116-0.754,2.941-1.989,4.056-2.745l25.377-17.123 c1.117-0.753,2.944-1.985,4.06-2.739l40.451-27.324c1.116-0.754,3-1.892,4.187-2.529c0,0,1.065-0.637,2.169-0.881 c1.104-0.244,3.079-0.189,4.389,0.123l3.792,2.662C510.562,167.836,511.791,170.974,511.865,171.974z"></path> </g> </g> <path style="fill:#CC8529;" d="M511.999,458.657v40.265c0,0.62,0,1.153-0.089,1.685c0.089,0.355,0,0.621,0,0.976c0,0,0,0,0,0.089 c-0.625,1.862-3.48,3.014-8.385,3.014H46.383l90.001-80.084l0.089-0.089l112.657-100.216l10.972-9.668l2.942-2.661l9.723,5.677 L511.999,458.657z"></path> <path style="fill:#F6AF47;" d="M511.999,497.414v1.508c0,0.62,0,1.153-0.089,1.685c0.089,0.355,0,0.621,0,0.976c0,0,0,0,0,0.089 c-0.625,1.862-3.48,3.014-8.385,3.014H8.474c-4.905,0-7.76-1.152-8.385-3.014c0-0.089,0-0.089,0-0.089c0-0.355-0.089-0.621,0-0.976 C0,500.075,0,499.542,0,498.922v-1.508c0.803-1.064,1.963-2.128,3.479-3.193L241.549,320.57c0.089,0,0.089-0.088,0.179-0.176 c0.268-0.178,0.536-0.355,0.803-0.532c4.905-3.46,9.901-5.855,13.469-6.74c1.249,0.354,2.586,0.797,4.104,1.507 c2.854,1.153,6.154,3.016,9.365,5.233c0.356,0.265,0.624,0.443,0.981,0.708l238.069,173.651 C510.035,495.374,511.195,496.438,511.999,497.414z"></path> </g> </g></svg>
+                    <a href="mailto:joaovillaca10@gmail.com">joaovillaca10@gmail.com</a>
+                </div>
+
+                <div class="social-media-line">
+                    <svg class="social-media-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-label="Instagram" role="img" viewBox="0 0 512 512" width="32px" height="32px" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect width="512" height="512" rx="15%" id="b"></rect> <use fill="url(#a)" xlink:href="#b"></use> <use fill="url(#c)" xlink:href="#b"></use> <radialGradient id="a" cx=".4" cy="1" r="1"> <stop offset=".1" stop-color="#fd5"></stop> <stop offset=".5" stop-color="#ff543e"></stop> <stop offset="1" stop-color="#c837ab"></stop> </radialGradient> <linearGradient id="c" x2=".2" y2="1"> <stop offset=".1" stop-color="#3771c8"></stop> <stop offset=".5" stop-color="#60f" stop-opacity="0"></stop> </linearGradient> <g fill="none" stroke="#ffffff" stroke-width="30"> <rect width="308" height="308" x="102" y="102" rx="81"></rect> <circle cx="256" cy="256" r="72"></circle> <circle cx="347" cy="165" r="6"></circle> </g> </g></svg>
+                    <a href="https://instagram.com/villacasp">@villacasp</a>
+                </div>
+
+                <div class="social-media-line">
+                    <svg class="social-media-icon" width="32px" height="32px" viewBox="0 -10.5 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>Soundcloud-color</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Color-" transform="translate(-301.000000, -469.000000)" fill="#FF4300"> <path d="M301,491.152608 C301,491.756664 301.215945,492.213396 301.647743,492.52299 C302.079587,492.832537 302.541182,492.941985 303.032573,492.851428 C303.494168,492.760824 303.81804,492.594702 304.004234,492.353108 C304.190336,492.111513 304.283433,491.711316 304.283433,491.152608 L304.283433,484.583839 C304.283433,484.115689 304.123374,483.719298 303.80321,483.394665 C303.483092,483.069986 303.092212,482.90767 302.630572,482.90767 C302.183852,482.90767 301.800433,483.069986 301.480269,483.394665 C301.160105,483.719298 301,484.115689 301,484.583839 L301,491.152608 L301,491.152608 Z M306.137273,493.961324 C306.137273,494.399303 306.289918,494.727695 306.595161,494.946685 C306.900449,495.165675 307.291329,495.275124 307.767799,495.275124 C308.25919,495.275124 308.657485,495.165629 308.962773,494.946685 C309.268016,494.727742 309.420661,494.399303 309.420661,493.961324 L309.420661,478.649296 C309.420661,478.196277 309.260556,477.807405 308.940437,477.482773 C308.620273,477.15814 308.229394,476.995778 307.767799,476.995778 C307.32108,476.995778 306.937615,477.15814 306.617497,477.482773 C306.297332,477.807452 306.137273,478.196277 306.137273,478.649296 L306.137273,493.961324 L306.137273,493.961324 Z M311.25221,494.686153 C311.25221,495.124087 311.408562,495.452525 311.721266,495.671515 C312.033969,495.890459 312.436017,495.999954 312.927454,495.999954 C313.403924,495.999954 313.794804,495.890459 314.100047,495.671515 C314.405335,495.452525 314.55798,495.124087 314.55798,494.686153 L314.55798,480.71053 C314.55798,480.242426 314.397875,479.842229 314.077756,479.510031 C313.757592,479.177833 313.374173,479.011757 312.927454,479.011757 C312.465813,479.011757 312.071226,479.177833 311.743647,479.510031 C311.416068,479.842229 311.252256,480.242426 311.252256,480.71053 L311.252256,494.686153 L311.25221,494.686153 Z M316.389483,494.754106 C316.389483,495.584671 316.940422,495.999954 318.042345,495.999954 C319.144223,495.999954 319.695161,495.584671 319.695161,494.754106 L319.695161,472.103177 C319.695161,470.834725 319.31545,470.117461 318.556027,469.951339 C318.064635,469.830519 317.580659,469.97399 317.104189,470.381707 C316.627673,470.789423 316.389438,471.363216 316.389438,472.103177 L316.389438,494.754106 L316.389483,494.754106 Z M321.616146,495.410983 L321.616146,470.766772 C321.616146,469.981556 321.846921,469.513452 322.308561,469.362415 C323.306219,469.12082 324.296463,469 325.279245,469 C327.557469,469 329.679432,469.543622 331.644951,470.630867 C333.610517,471.718111 335.200124,473.201747 336.413681,475.081774 C337.627284,476.961848 338.330867,479.034361 338.52443,481.299501 C339.432744,480.906869 340.400606,480.710577 341.42806,480.710577 C343.512766,480.710577 345.295936,481.458057 346.777525,482.953019 C348.25916,484.448026 349,486.244969 349,488.343986 C349,490.458088 348.25916,492.262597 346.777525,493.757558 C345.295936,495.252519 343.520227,496 341.450396,496 L322.018102,495.977349 C321.884041,495.932047 321.783529,495.848963 321.716521,495.728189 C321.649513,495.607415 321.616146,495.501587 321.616146,495.410983 L321.616146,495.410983 L321.616146,495.410983 Z" id="Soundcloud"> </path> </g> </g> </g></svg>
+                    <a href="https://soundcloud.com/villaca1">villaca1</a>
+                </div>
+
+                <div class="social-media-line">
+                    <svg class="social-media-icon" width="32px" height="32px" viewBox="0 0 83 40" aria-label="RA logo"><title>RA</title><g fill="none" fill-rule="evenodd"><path fill="none" d="M0 0h24v24H0z"></path><path d="M82.092 32.018c.556-.533.908-1.28.908-2.113 0-.802-.38-1.523-.9-2.051L58.665 4.3l-7.073 7.11 18.45 18.543h-26.14c-1.278-.038-2.29-.469-3.147-1.304l-11.73-11.788a6.828 6.828 0 00-4.689-1.888l-.017.001H10.004v-4.92h14.825c2.938.002 5.559 1.21 7.48 3.15l8.749 8.793 7.073-7.11-8.92-8.963C35.485 2.234 30.45 0 24.805 0H0v25.027h20.978v.002a4.919 4.919 0 013.486 1.48L35.95 38.053A6.74 6.74 0 0040.449 40h31.733a4.911 4.911 0 003.423-1.45l6.491-6.524-.004-.008" fill="currentColor"></path></g></svg>
+                    <a href="https://ra.co/dj/villaça">Resident Advisor</a>
+                </div>
+
+                <div class="social-media-line">
+                    <svg class="social-media-icon" xmlns="http://www.w3.org/2000/svg" aria-label="Bandcamp" role="img" viewBox="0 0 512 512" width="32px" height="32px" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><rect width="512" height="512" rx="15%" fill="#ffffff"></rect><path fill="#1ad" d="M99 349h215l99-186H198"></path></g></svg>            
+                    <a href="https://villaca.bandcamp.com">Bandcamp</a>
+                </div>
+
+                <div class="social-media-line">
+                    <svg class="social-media-icon" fill="#000000" width="32px" height="32px" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><title>Discogs icon</title><path d="M1.7422 11.982c0-5.6682 4.61-10.2782 10.2758-10.2782 1.8238 0 3.5372.48 5.0251 1.3175l.8135-1.4879C16.1768.588 14.2474.036 12.1908.0024h-.1944C5.4091.0144.072 5.3107 0 11.886v.1152c.0072 3.4389 1.4567 6.5345 3.7748 8.7207l1.1855-1.2814c-1.9798-1.8743-3.218-4.526-3.218-7.4585zM20.362 3.4053l-1.1543 1.2406c1.903 1.867 3.0885 4.4636 3.0885 7.3361 0 5.6658-4.61 10.2758-10.2758 10.2758-1.783 0-3.4605-.456-4.922-1.2575l-.8542 1.5214c1.7086.9384 3.6692 1.4735 5.7546 1.4759C18.6245 23.9976 24 18.6246 24 11.9988c-.0048-3.3717-1.399-6.4146-3.638-8.5935zM1.963 11.982c0 2.8701 1.2119 5.4619 3.146 7.2953l1.1808-1.2767c-1.591-1.5166-2.587-3.6524-2.587-6.0186 0-4.586 3.7293-8.3152 8.3152-8.3152 1.483 0 2.875.3912 4.082 1.0751l.8351-1.5262C15.481 2.395 13.8034 1.927 12.018 1.927 6.4746 1.9246 1.963 6.4362 1.963 11.982zm18.3702 0c0 4.586-3.7293 8.3152-8.3152 8.3152-1.4327 0-2.7837-.3648-3.962-1.0055l-.852 1.5166c1.4303.7823 3.0718 1.2287 4.814 1.2287 5.5434 0 10.055-4.5116 10.055-10.055 0-2.8077-1.1567-5.3467-3.0165-7.1729l-1.183 1.2743c1.519 1.507 2.4597 3.5924 2.4597 5.8986zm-1.9486 0c0 3.5109-2.8558 6.3642-6.3642 6.3642a6.3286 6.3286 0 01-3.0069-.756l-.8471 1.507c1.147.624 2.4597.9768 3.854.9768 4.4636 0 8.0944-3.6308 8.0944-8.0944 0-2.239-.9143-4.2692-2.3902-5.7378l-1.1783 1.267c1.1351 1.152 1.8383 2.731 1.8383 4.4732zm-14.4586 0c0 2.3014.9671 4.382 2.515 5.8578l1.1734-1.2695c-1.207-1.159-1.9606-2.786-1.9606-4.5883 0-3.5108 2.8557-6.3642 6.3642-6.3642 1.1423 0 2.215.3048 3.1437.8352l.8303-1.5167c-1.1759-.6647-2.5317-1.0487-3.974-1.0487-4.4612 0-8.092 3.6308-8.092 8.0944zm12.5292 0c0 2.4502-1.987 4.4372-4.4372 4.4372a4.4192 4.4192 0 01-2.0614-.5088l-.8351 1.4879a6.1135 6.1135 0 002.8965.727c3.3885 0 6.1434-2.7548 6.1434-6.1433 0-1.6774-.6767-3.1989-1.7686-4.3076l-1.1615 1.2503c.7559.7967 1.2239 1.8718 1.2239 3.0573zm-10.5806 0c0 1.7374.7247 3.3069 1.8886 4.4252L8.92 15.1569l.0144.0144c-.8351-.8063-1.3559-1.9366-1.3559-3.1869 0-2.4502 1.9846-4.4372 4.4372-4.4372.8087 0 1.5646.2184 2.2174.5976l.8207-1.4975a6.097 6.097 0 00-3.0381-.8063c-3.3837-.0048-6.141 2.7525-6.141 6.141zm6.681 0c0 .2952-.2424.5351-.5376.5351-.2952 0-.5375-.24-.5375-.5351 0-.2976.24-.5375.5375-.5375.2952 0 .5375.24.5375.5375zm-3.9405 0c0-1.879 1.5239-3.4029 3.4005-3.4029 1.879 0 3.4005 1.5215 3.4005 3.4029 0 1.879-1.5239 3.4005-3.4005 3.4005S8.6151 13.861 8.6151 11.982zm.1488 0c.0048 1.7974 1.4567 3.2493 3.2517 3.2517 1.795 0 3.254-1.4567 3.254-3.2517-.0023-1.7974-1.4566-3.2517-3.254-3.254-1.795 0-3.2517 1.4566-3.2517 3.254Z"></path></g></svg>
+                    <a href="https://www.discogs.com/artist/7330255-Villaça">Discogs</a>
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
 </body>
 </html>
